@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cute Confession</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+        .home {
+            background-image: url('https://pin.it/4rdtfbzEE'); 
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .home h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .content, .confession {
+            display: none;
+        }
+        .confession button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container home">
+        <h1>Tớ thích cậu!</h1>
+        <button onclick="showContent()">Nhấn vào đây</button>
+    </div>
+
+    <div class="container content">
+        <h2>Nhạc cho cậu nghe này!</h2>
+        <div class="hidden">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hJ6iKKoY0HY?autoplay=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <button onclick="showConfession()">Tiếp tục</button>
+    </div>
+
+    <div class="container confession">
+        <h2>Lời tỏ tình của tớ</h2>
+        <p>Tớ đã thích cậu từ lâu rồi và tớ muốn nói rằng tớ rất trân trọng mọi khoảnh khắc chúng ta đã có cùng nhau.</p>
+        <button onclick="reply()">Phản hồi cho tớ nhé!</button>
+    </div>
+
+    <script>
+        function showContent() {
+            document.querySelector('.home').style.display = 'none';
+            document.querySelector('.content').style.display = 'block';
+        }
+
+        function showConfession() {
+            document.querySelector('.content').style.display = 'none';
+            document.querySelector('.confession').style.display = 'block';
+        
+        }
+    </script>
+</body>
+</html>
